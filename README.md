@@ -52,4 +52,32 @@ console.log(average)
 ```
 ### The reduce() method takes two arguments: a function and an initial value. The function is called once for each element in the array, and the initial value is used as the first argument to the function. The function returns the accumulated value, which is then used as the first argument to the function for the next element in the array. This process continues until all of the elements in the array have been processed.
 
+## 2. Implement a function that reverses a given string.
+```
+function reverseString(str) {
+  const reversedString = [];
+  for (let i = str.length - 1; i >= 0; i--) {
+    reversedString.push(str[i]);
+  }
+  return reversedString.join("");
+}
+const str = "hello";
+const reversedStr = reverseString(str);
+console.log(reversedStr); // olleh
+```
+##### What is push here?
+In JavaScript, the push() method is used to add one or more elements to the end of an array. It is a mutating method, which means that it changes the original array. The push() method takes one or more elements as its arguments and adds them to the end of the array. The elements are added in the order that they are specified in the arguments.
+
+##### What is join here?
+
+In JavaScript, the join() method is used to convert an array to a string. The join() method takes a separator string as an argument. The default separator string is a comma.
+
+#### Second Method
+```
+const str = "Hello, world!";
+const reversedStr = str.split("").reverse().join("");
+```
+##### What is split() here?
+
+The split() method in JavaScript is used to split a string into an array of substrings. The split() method takes a separator string as an argument. The default separator string is a space.
 
