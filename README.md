@@ -152,3 +152,17 @@ let positive_array = numbers.filter(value => value >= 0);
 
 console.log(positive_array);
 ```
+
+## 6. Implement a function that removes all duplicates from an array.
+```
+const arr = [1,2,3,4,4,5,5,4,3,3,2,1,8,9,11,12];
+const duplicate_array = [];
+for(let i = 0 ; i < arr.length; i++){
+  if(!duplicate_array.includes(arr[i])){
+    duplicate_array.push(arr[i])
+  }
+}
+console.log(duplicate_array);
+```
+
+#### We can also write the condition like `duplicate_array.indexOf(arr[i]) === -1`
