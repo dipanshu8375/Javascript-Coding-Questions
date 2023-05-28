@@ -99,3 +99,56 @@ function myStrng(str){
 }
 console.log(myStrng(strng));
 ```
+
+## 4. Implement a function that checks if a given number is prime.
+```
+function isPrimeIterative(number) {
+  if (number <= 1) {
+    return false;
+  }
+
+  for (let i = 2; i <= Math.sqrt(number); i++) {
+    if (number % i === 0) {
+      return false;
+    }
+  }
+
+  return true;
+}
+console.log(isPrimeIterative(123))
+```
+## 5. Write a function that takes a sentence as input and returns the number of words in the sentence
+
+```
+const myStr = "Write a function that takes a sentence as input and returns the number of words in the sentence           ";
+console.log(myStr.length)
+const newArr = myStr.split("");
+const numberOfWords = newArr.filter((words)=>{
+  return words !== " ";
+})
+
+console.log(numberOfWords.length);
+```
+
+#### What is filter() method?
+- The JavaScript filter function iterates over the existing values in an array and returns the values that pass. The search criteria in the JavaScript filter function are passed using a callbackfn.
+- #### Syntax: array.filter(function(value, index, arr), thisValue)
+- The JavaScript filter does not mutate the string but rather creates a new one hence the original string is not affected.
+Limitations:
+- The filter array function does not mutate the array. Remember to save the filtered array in case you plan on using it later
+- The function will not execute in case the array is empty.
+```
+let freelancers = [{name: "Harry", skill: "JavaScript"},{name: "Mark", skill: "Python"},{name: "David", skill:"JavaScript"}];
+
+let javascript_freelancers = freelancers.filter(function(freelancer) {
+    return freelancer.skill == "JavaScript"; });
+
+console.log(javascript_freelancers);
+```
+```
+let numbers = [-23,-20,-17, -12, -5, 0, 1, 5, 12, 19, 20];
+
+let positive_array = numbers.filter(value => value >= 0);
+
+console.log(positive_array);
+```
