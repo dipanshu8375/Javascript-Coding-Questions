@@ -81,3 +81,21 @@ const reversedStr = str.split("").reverse().join("");
 
 The split() method in JavaScript is used to split a string into an array of substrings. The split() method takes a separator string as an argument. The default separator string is a space.
 
+## 3. Write a function that takes an array of strings as input and returns the longest string in the array.
+```
+const strng = ["eeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", "this", "hello", "usgkjfberiugfrebekrjbrj" , "indiabhutan"];
+const longestString = strng.reduce((accum, current)=>{
+  return current.length > accum.length ? current : accum
+})
+console.log(longestString);
+function myStrng(str){
+  let longestStrng = "";
+  for(let i = 0; i < str.length; i++){
+    if(str[i].length > longestStrng.length){
+      longestStrng = str[i]
+    }
+  }
+  return longestStrng
+}
+console.log(myStrng(strng));
+```
